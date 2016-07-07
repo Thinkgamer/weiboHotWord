@@ -1,0 +1,12 @@
+创建表：
+create table hot_word_table(
+    day string,
+    hour string,
+    word string,
+    num int)
+comment 'this hot words table'
+Partitioned by (timeday string)
+row format delimited fields terminated by ",";
+
+加载到数据库：
+load data local inpath "/home/thinkgamer/桌面/result" into table hot_word_table partition(timeday='20160221');
