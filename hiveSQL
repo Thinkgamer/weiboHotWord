@@ -6,7 +6,10 @@ create table hot_word_table(
     num int)
 comment 'this hot words table'
 Partitioned by (timeday string)
-row format delimited fields terminated by ",";
+row format delimited fields terminated by "\t";
 
 加载到数据库：
-load data local inpath "/home/thinkgamer/桌面/result" into table hot_word_table partition(timeday='20160221');
+#从本地加载
+load data local inpath "/home/thinkgamer/桌面/20160221-r-00000" into table hot_word_table partition(timeday='20160221');
+#从hdfs加载
+load data inpath "/mr/hot_word/output/20160221-r-00000" into table hot_word_table partition(timeday="20160221")
