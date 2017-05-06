@@ -1,7 +1,7 @@
 # weiboHotWord
 基于hadoop和hive的微博热词跟踪系统
 
-#对应的blog地址为:
+# 对应的blog地址为:
 <a href="http://blog.csdn.net/gamer_gyt/article/details/51940211">http://blog.csdn.net/gamer_gyt/article/details/51940211</a>
 <br />
 <1>首先是利用微博的api得到每天的微博数据</br>
